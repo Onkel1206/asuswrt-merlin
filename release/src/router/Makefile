@@ -3772,6 +3772,7 @@ libxml2/stamp-h1:
 	cd libxml2 && \
 	CC=$(CC) AR=$(AR) RANLIB=$(RANLIB) LD=$(LD) CFLAGS="-Os -Wall $(EXTRACFLAGS)" LDFLAGS=-ldl \
 	./$(CONFIGURE) --prefix=/usr --without-python --disable-dependency-tracking
+	cd libxml2 && automake --add-missing
 	touch $@
 
 libxml2: libxml2/stamp-h1
